@@ -1,19 +1,32 @@
-{
-  "name": "first-project",
-  "version": "1.0.0",
-  "description": "Part of DevOps project",
-  "main": "script.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Ohad-Ma/my-web-app.git"
-  },
-  "author": "Ohad",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Ohad-Ma/my-web-app/issues"
-  },
-  "homepage": "https://github.com/Ohad-Ma/my-web-app#readme"
-}
+name: CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    # Remove this step if no build process is required
+     - name: Build project
+       run: npm run build
+
+    - name: Run tests
+      run: npm test
