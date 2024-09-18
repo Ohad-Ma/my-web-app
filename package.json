@@ -5,7 +5,7 @@
   "main": "script.js",
   "scripts": {
     "build": "echo 'No build step needed'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Ohad-Ma/my-web-app/issues"
   },
-  "homepage": "https://github.com/Ohad-Ma/my-web-app#readme"
+  "homepage": "https://github.com/Ohad-Ma/my-web-app#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
 }
