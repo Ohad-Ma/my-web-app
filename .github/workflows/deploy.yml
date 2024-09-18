@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # The branch where code changes trigger the deployment
+      - main  # Trigger deployment when changes are pushed to the main branch
 
 jobs:
   build:
@@ -21,12 +21,12 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Build the project
+    - name: Build project
       run: npm run build  # Ensure your package.json has a "build" script
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_branch: gh-pages  # This is where your site is deployed
-        publish_dir: ./dist  # Replace with your build directory (e.g., ./build)
+        github_token: ${{ secrets.GITHUB_TOKEN }}  # This token gives write access
+        publish_branch: gh-pages                    # This is the branch where GitHub Pages will deploy
+        publish_dir: ./dist                         # Adjust this to your actual build directory (e.g., ./build)
