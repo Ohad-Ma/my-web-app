@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Trigger deployment when changes are pushed to the main branch
+      - main  # Trigger deployment on push to main branch
 
 jobs:
   build:
@@ -27,6 +27,6 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}  # This token gives write access
-        publish_branch: gh-pages                    # This is the branch where GitHub Pages will deploy
-        publish_dir: ./dist                         # Adjust this to your actual build directory (e.g., ./build)
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: ./dist  # Replace with your actual build directory
