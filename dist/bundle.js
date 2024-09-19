@@ -1,1 +1,1 @@
-console.log("Hello, Webpack!");
+(()=>{var r={954:r=>{r.exports={sum:function(r,e){return r+e},sub:function(r,e){return r-e},greet:function(){alert("Hello, wecome to my web app!")}}}},e={};!function t(o){var n=e[o];if(void 0!==n)return n.exports;var u=e[o]={exports:{}};return r[o](u,u.exports,t),u.exports}(954)})();
