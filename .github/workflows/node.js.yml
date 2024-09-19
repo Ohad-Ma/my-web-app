@@ -25,8 +25,8 @@ jobs:
       run: npm install
 
     # Build step removed since there is no build script
-    # - name: Build project
-    #   run: npm run build
+    - name: Build project
+      run: npm run build
 
     # Tests step removed since there are no tests
     - name: Run tests
