@@ -1,4 +1,4 @@
-# my-web-app
+# Simple WebApp - CI/CD
 A DevOps project which I Practice here CI/CD via GitHub actions.
 
 1. Create Simple webpage.
