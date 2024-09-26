@@ -66,7 +66,7 @@ To bundle and deploy the project:
   * Pushes the generated files to the gh-pages branch.
   
 The site is then automatically published at:
-!()[https://ohad-ma.github.io/my-web-app/]
+[https://ohad-ma.github.io/my-web-app/]()
 
 ## GitHub Actions Workflow
 
